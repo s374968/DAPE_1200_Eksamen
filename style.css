@@ -65,6 +65,9 @@ body::-webkit-scrollbar
 .hr2{
     width: 80vw;
 }
+.hr3{
+    width: 30vw;
+}
 /*class for bildet av Estaten*/
 .estateIMG{
     height: 60vw;

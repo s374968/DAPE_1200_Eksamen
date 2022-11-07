@@ -1,0 +1,538 @@
+/*-----------------------------------------------------------------------------------------*/
+/*UNIVERSALT*/
+/*---------------------------------------------------------------------------------------*/
+/*Standard settings*/
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(33, 33, 33);
+    overflow-x: hidden;
+    /*Støttes ikke i Safari, men er kun for det visuelle når det kommer til oversscrolling y aksen, fungerer helt fint på safari uten denne*/
+    overscroll-behavior-y: none; 
+}
+/*fjerner scrollbar men beholder scrollefunksjon*/
+body::-webkit-scrollbar
+{
+	display: none;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*FELLES FOR FLERE SIDER*/
+/*---------------------------------------------------------------------------------------*/
+.floating_image{
+    float: left;
+}
+.floating_image_right{
+    float: right;
+}
+/*spesifikasjoner for text grid*/
+.text_grid{
+    margin: 1vw;
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    align-content: center;
+}
+.center{
+    text-align: center;
+}
+.text_grid > p{
+    font-size: 2em;
+    text-align: center;
+}
+.p{
+    font-size: 2em;
+}
+/*Source for bilder via link*/
+.fotoSource{
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    font-size: 0.8em
+}
+/*for kontrast på visse sider*/
+.fotoLink{
+    color: #00FFFF;
+    opacity: 0.7;
+}
+.fotocolor{
+    color: white;
+    opacity: 0.4;
+}
+/*hr linjer for det visuelle*/
+.hr1{
+    width: 75vw;
+}
+.hr2{
+    width: 80vw;
+}
+/*class for bildet av Estaten*/
+.estateIMG{
+    height: 60vw;
+    width: 100vw;
+}
+.fixed{
+    position:fixed;
+}
+/*class for sort/transparent topbar*/
+.topbar{
+    position: fixed;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.819);
+    grid-template-columns: 2.7fr 1.3fr 1fr 1fr 1fr 1fr 1fr 3fr;
+    top:0%;
+    width: 100%;
+    transition: height .5s ease-in-out;
+    height: 8vw;
+}
+/*class for img children av topbar, i dette tilfellet logoen*/
+.topbar > img{
+    transition: 0.75s;
+    height: 8vw;
+}
+.topbar > img:hover{
+    cursor: pointer;
+}
+.absolute{
+    position: absolute;
+}
+/*spesifikt for alle 'a' under class topbar, dvs alle "knappene" i topbar*/
+/* Her er det laget en egen class i stedet for .topbar > a{} pga manipulasjonen via js må endre en spesifikk class og ikke subelements av .topbar*/
+.aTopbar{
+    font-size: 1.3em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    margin: auto;
+    background-color: rgba(23, 23, 23, 0);
+    color: #e2e2e0;
+    transition: 0.5s height ease-in-out;
+    height: 1vw;
+}
+.underline{
+    text-decoration: underline;
+}
+.aTopbar:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*definerer mainbar som slider opp for cafe, booking, topic, og code.html*/
+.mainbar{
+    color: #e2e2e0;
+    position:absolute;
+    top:8vw;
+    min-height:100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.819);
+}
+.mainbar > h1{
+    text-align: center;
+    font-family: 'Garamond', serif;
+    font-size: 4em;
+}
+.mainbar > h2{
+    font-family: 'Garamond', serif;
+    font-size: 1.5em;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*CSS spesifikt for index.html*/
+/*---------------------------------------------------------------------------------------*/
+/*class farge av tekst i index.html*/
+.whitecolor{
+    color: #e2e2e0;
+}
+.whitecolor > h1{
+    text-align: center;
+    font-family: 'Garamond', serif;
+    font-size: 9vw;
+}
+
+.whitecolor > h2{
+    text-align: center;
+    font-family: 'Garamond', serif;
+    font-size: 3vw;
+}
+/*class for bilde estatebilde nr2 index.html*/
+.estateIMGtwo{
+    width: 37vw;
+    height: 25vw;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2vw;
+}
+/*scrollfunksjon, forklares i KODE.html*/
+.endre_hoyde_for_scroll_topbar {
+    transition: height .5s ease-in-out;
+    height: 5vw;
+}
+/*scrollfunksjon, forklares i KODE.html*/
+.endre_hoyde_for_scroll_logo {
+    transition: 0.5s;
+    transform-origin: top;
+    scale: 0.6;
+}
+/*scrollfunksjon, forklares i KODE.html*/
+.endre_hoyde_for_scroll_a {
+    height: 4.5vw;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*CSS spesifikt for code.html*/
+/*---------------------------------------------------------------------------------------*/
+/*class for bilde og tekst i code.html*/
+.bilde_og_text_code{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.2fr 1fr 1fr;
+    align-content: top;
+    margin-top: 3vw;
+}
+/*class gif av kode*/
+.codeGif{
+    width: 35em;
+    height: 10em;
+    border-radius: 5px;
+}
+/*class bilde av kode*/
+.codePng{
+    border-radius: 5px;
+    width: 30em;
+}
+.aligner > p{
+    text-align: left;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+}
+.text > strong{
+    font-size: 1.5em;
+    text-align: center;
+}
+.paragraph{
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-top: 5%;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*CSS spesifikt for café.html*/
+/*---------------------------------------------------------------------------------------*/
+.apningstid{
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    margin-top: -3em;
+}
+.allergenVisning{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+/*class for overskriftene SNACKS, LUNSJ, MIDDAG*/
+.type_matrett {
+    text-align: center;
+    margin: 0.8em;
+    margin-top: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+    height: 0.2em;
+    color: #e2e2e0;
+    text-decoration: underline;
+}
+/*Aligner flexbox containeren til midten*/
+.matrett_box_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Definerer class for matrett_box, children av matrett_box_container*/
+.matrett_box {
+    margin-top: 4em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 9vw;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background-color: brown;
+    position: relative;
+    width:17vw;
+    margin: 2vw;
+    background-size: 21vw;
+    position: relative;
+}
+/*bakgrunn for matretter*/
+.kylling{
+    background-image: url(./images/kylling.png);
+}
+.jalapeno{
+    background-image: url(./images/jalapeno.png);
+}
+.lokringer{
+    background-image: url(./images/onionrings.png);
+}
+.nachos{
+    background-image: url(./images/nacho.png);
+}
+.vegansalad{
+    background-image: url(./images/vegansalad.png);
+}
+.peanutsalad{
+    background-image: url(./images/peanutsalad.png);
+}
+.bruchetta{
+    background-image: url(./images/bruchetta.png);
+}
+.caesarwrap{
+    background-image: url(./images/caesarwrap.png);
+}
+.burger{
+    background-image: url(./images/burger.png);
+}
+.pizza{
+    background-image: url(./images/pizza.png);
+}
+.pasta{
+    background-image: url(./images/veganpasta.png);
+}
+.gulasjsuppe{
+    background-image: url(./images/gulasj.png);
+}
+.matrett_box:hover{
+    cursor: pointer;
+}
+/*class for de sorte boksene over matrett_box class*/
+.sort_hoverbox {
+    position: absolute;
+    margin: 2vw;
+    left: -2vw;
+    bottom: -2vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
+    font-size: 0.9vw;
+    width:17vw;
+    height: 4vw;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.789);
+    transition: height .5s;
+}
+/*transition for høyde av sorte boksene når man hovrer matrett_box*/
+.matrett_box:hover .sort_hoverbox{
+    background-color: rgba(0, 0, 0, 0.871);
+    transition: height .5s;
+    height: 9vw;
+}
+/*class for allergene/vegan/vegetarianer*/
+.allergener{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, serif;
+    font-size: 1vw;
+    opacity: 0;
+    visibility: hidden;
+}
+/*transition for å vise allergener når man hovrer matrett_box*/
+.matrett_box:hover .allergener{
+    transition: opacity .5s ease-out;
+    transition-delay: .2s;
+    opacity: 1;
+    visibility: visible;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*CSS spesifikt for topic.html*/
+/*---------------------------------------------------------------------------------------*/
+.tokyo_image{
+    width: 70vw;
+    height: 40vw;
+    border-radius: 10px;
+}
+.depressed_image{
+    margin-top: 1vw;
+    border-radius: 15px;
+    height: 39vw;
+    width: 30vw;
+    padding-right: 10px;
+    padding-bottom: -2vw;
+}
+/*Bar for anchors*/
+.bookingBar{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
+}
+.bookingBar > a{
+    font-size: 1.3em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+    margin: auto;
+    background-color: rgba(23, 23, 23, 0);
+    color: #e2e2e0;
+    border: 3px solid #e2e2e0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.bookingBar>a:hover{
+    background-color: #e2e2e0;
+    color: black;
+}
+.google_maps_image{
+    margin-top: 1vw;
+    height: 30vw;
+    width: 47vw;
+    padding-right: 1vw;
+}
+/*-----------------------------------------------------------------------------------------*/
+/*CSS spesifikt for telefon/tablet*/
+/*---------------------------------------------------------------------------------------*/
+@media (max-width: 1040px) {
+    
+    /*Reenable overscroll for å refreshe nettsiden når man drar ned på tlf/tablet*/
+    html, body{
+        overscroll-behavior-y: auto;
+    }
+    .fixed{
+        position:relative;
+    }  
+    /*-----------------------------------------------------------------------------------------*/
+    /*index.html*/
+    /*---------------------------------------------------------------------------------------*/
+    .topbar{
+        position: absolute;
+        height: 90vw;
+        display: block;
+        margin-top: -10vw;
+        width: 100%;
+        background-color: rgba(23, 23, 23, 0.658);
+    }
+    .topbar > img{
+        display: none;
+    }
+    .aTopbar{
+        display: block;
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 14vw;
+        font-weight: 900;
+    }
+    .estateIMG{
+        width: 150vw;
+        height: 80vw;
+        margin-left: -20vw;
+    }
+    .estateIMGtwo{
+        width: 90vw;
+        height: 60vw;
+    }
+    .estateBildeDiv{
+        overflow: hidden;
+    }
+    .mainbar{
+        top: 90vw;
+        background-color: rgb(33, 33, 33);
+    }
+    .mainbar > h1{
+        margin-top: -3vw;
+    }
+    .text > p{
+        font-size: 1.2em;
+        text-align: left;
+    }
+    .text > strong{
+        font-size: 1.1em;
+        text-align: left;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+    /*cafe.html*/
+    /*---------------------------------------------------------------------------------------*/
+    .matrett_box_container {
+        display:grid;
+    }
+    .matrett_box {
+        height: 50vw;
+        width:90vw;
+        background-size: 100%;
+        margin-top: 5vw;
+    }
+    .sort_hoverbox {
+        font-size: 4vw;
+        width:90vw;
+        height: 30vw;
+        background-color: rgba(0, 0, 0, 0.635);
+    }
+    .type_matrett{
+        margin-top: 10vw;
+        font-size: 12vw;
+        font-weight: 900;
+    }
+    .matrett_box:hover .sort_hoverbox{
+        height: 30vw;
+    }
+    .allergener{
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, serif;
+        font-size: 4vw;
+        margin-top: -5vw;
+        font-weight: 700;
+        opacity: 1;
+        visibility: visible;
+    }
+    .allergenVisning{
+        font-size: 1.2em;
+        color: white;
+        text-align: center;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+    /*code.html*/
+    /*---------------------------------------------------------------------------------------*/
+    .bilde_og_text_code{
+        display:block;
+    }
+    .codePng{
+        display: block;
+        margin: auto;
+        width: 75vw;
+    }
+    .codeGif{
+        display:block;
+        margin: auto;
+        width: 75vw;
+        height: 20vw;
+    }
+    .paragraph{
+        display: block;
+        margin: auto;
+        width: 80%;
+        font-size: 1.2em;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+    /*topic.html*/
+    /*---------------------------------------------------------------------------------------*/
+    .depressed_image{
+        display: block;
+        height: 120vw;
+        width: 100%;
+    }
+    .tokyo_image{
+        height: 50vw;
+        width: 100%;
+    }
+    .p{
+        margin: auto;
+        width: 100%;
+        font-size: 1.2em;
+        text-align: left;
+    }
+    .floating_image{
+        float: none;
+        text-align: center;
+    }
+    /*-----------------------------------------------------------------------------------------*/
+    /*booking.html*/
+    /*---------------------------------------------------------------------------------------*/    
+    .google_maps_image{
+        display: block;
+        height: 50vw;
+        width: 100%;
+        padding-right: 1vw;
+    }
+}   

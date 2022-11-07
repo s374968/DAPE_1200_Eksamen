@@ -235,7 +235,6 @@ body::-webkit-scrollbar
     font-size: 2em;
     height: 0.2em;
     color: #e2e2e0;
-    text-decoration: underline;
 }
 /*Aligner flexbox containeren til midten*/
 .matrett_box_container {

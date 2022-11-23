@@ -94,7 +94,21 @@
 
                 <span></span>
                 <div>
-                    <p class = "p">Scollfunksjonen som er i index.html gjør at nettsiden virker mer dynamisk og brukervennlig samtidig som det blir lettere å lese teksten mens man fortsatt kan navigere til de andre sidene (forklart over). <br><br>På de andre sidene gikk jeg for en fixed position på bakgrunnsbildet og en absolute position på topbaren da jeg synes det passet bra når man scollet nedover samt at mainbaren matcher topbaren, de er begge gjennomsiktige. Hadde egentlig lagt til en animasjon for mainbar hvor den slider opp fra bunnen av nettsiden og møter topbaren, men da dette ikke er en SPA og disk cachingen i flere nettlesere var såpass dårlig at den begynte å loade så ble det mer forstyrrende enn kult. Så jeg droppet det.<br><br>Kjørte nettsiden gjennom en automatisert accessibility test og fikk endret på noen "underline" der de kanskje ikke passet helt. Den likte heller ikke "alt" teksten jeg hadde gitt til flere av bildene så endret disse så de passet bedre. Den insisterte også på at jeg burde ha en "main" element så det ble også lagt til. Nettsiden har verken Errors eller Contrast Error. Var visse ting den ikke likte med at man både kan klikke på bildene og på @linken under bildene. Lot dette være da jeg mener det er greit å kunne klikke på begge deler. <br><br>  Media queries er brukt for å endre på ting som "width", "heigh", "display", etc. på flere av elementene hvis enheten er mindre en 1040px vid. Dette for å tilpasse telefoner og tablets. Har for det meste brukt viewport for størrelse av elementer, men ved å kun endre på disse vil ikke nettsiden fungere praktisk på en telefon/tablet og gikk derfor for media queries på mindre enheter. Nettsiden kan også scales til forskjellige enheter over 1040px vid. Cafe.html er hentet fra tidligere oblig (ligger på samme github)
+                    <p class = "p">Scollfunksjonen som er i index.html gjør at nettsiden virker mer dynamisk og brukervennlig samtidig som det blir lettere å lese teksten mens man fortsatt kan navigere til de andre sidene (forklart over). <br><br>På de andre sidene gikk jeg for en fixed position på bakgrunnsbildet og en absolute position på topbaren da jeg synes det passet bra når man scollet nedover samt at mainbaren matcher topbaren, de er begge gjennomsiktige. Hadde egentlig lagt til en animasjon for mainbar hvor den slider opp fra bunnen av nettsiden og møter topbaren, men da dette ikke er en SPA og disk cachingen i flere nettlesere var såpass dårlig at den begynte å loade så ble det mer forstyrrende enn kult. Så jeg droppet det. (Se under)
+
+                    <hr class = "hr1">
+
+                    <br>
+                    
+                    <div class = "center">
+                        <img src = "./images/animasjon.gif" class = "animasjonGif" alt = "gif av kode">
+                    </div>
+
+                    <br>
+                    
+                    <hr class = "hr1">
+
+                    <p class = "p">Kjørte nettsiden gjennom en automatisert accessibility test og fikk endret på noen "underline" der de kanskje ikke passet helt. Den likte heller ikke "alt" teksten jeg hadde gitt til flere av bildene så endret disse så de passet bedre. Den insisterte også på at jeg burde ha en "main" element så det ble også lagt til. Nettsiden har verken Errors eller Contrast Error. Var visse ting den ikke likte med at man både kan klikke på bildene og på @linken under bildene. Lot dette være da jeg mener det er greit å kunne klikke på begge deler. <br><br>  Media queries er brukt for å endre på ting som "width", "heigh", "display", etc. på flere av elementene hvis enheten er mindre en 1040px vid. Dette for å tilpasse telefoner og tablets. Har for det meste brukt viewport for størrelse av elementer, men ved å kun endre på disse vil ikke nettsiden fungere praktisk på en telefon/tablet og gikk derfor for media queries på mindre enheter. Nettsiden kan også scales til forskjellige enheter over 1040px vid.
                     </p>
                 </div>
 

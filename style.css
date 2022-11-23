@@ -215,6 +215,11 @@ body::-webkit-scrollbar
     line-height: 1.5em;
     margin-top: 5%;
 }
+.animasjonGif{
+    width: 55vw;
+    height: 25vw;
+    border-radius: 5px;
+}
 /*-----------------------------------------------------------------------------------------*/
 /*CSS spesifikt for café.html*/
 /*---------------------------------------------------------------------------------------*/
@@ -499,6 +504,12 @@ body::-webkit-scrollbar
         margin: auto;
         width: 75vw;
         height: 20vw;
+    }
+    .animasjonGif{
+        display:block;
+        margin: auto;
+        width: 75vw;
+        height: 35vw;
     }
     .paragraph{
         display: block;
